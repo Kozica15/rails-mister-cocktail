@@ -1,0 +1,16 @@
+<%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name, placeholder: "Mojito" %>
+    <%= f.button :submit, class: "btn btn-primary"  %>
+<% end %>
+
+<!-- <h1>Add your cocktail</h1>
+<div>
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %> <br>
+    <%= f.input :photo %> <br>
+    <%= f.input :photo_cache, as: :hidden %><br>
+  <%= f.submit %>
+  <% end %>
+  <%= link_to 'back to index', cocktails_path  %>
+</div>
+ -->

@@ -1,0 +1,27 @@
+
+<div class ="text-center">
+  <h1>Voici tous les cocktails</h1>
+</div>
+<div class="container padded ">
+  <div class="row">
+    <div class="col-xs-offset-3 col-xs-6">
+      <ul class= "list-group">
+        <% @cocktails.each do |cocktail| %>
+        <!-- le prefix qui construit le path: prefix_path est cocktail pour la route show  -->
+        <li class="list-group-item">
+          <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+        </li>
+        <li>
+          <ol>
+            <% cocktail.ingredients.each do |ingredient| %>
+            <li><%= ingredient.name %></li>
+            <% end %>
+          </ol>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
